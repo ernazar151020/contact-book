@@ -21,6 +21,9 @@ const Book = ({ book }) => {
         />
       </div>
       <div className='book_name book_item'>👤{book.name}</div>
+      <div className='book_name book_item'>👤{book.username}</div>
+      <div className='book_name book_item'>📱{book.phone}</div>
+      <div className='book_name book_item'>✉️{book.email}</div>
       <div className='book_footer book_item' onClick={()=>handleOpenModal(book)}>
         Edit ✍️
       </div>

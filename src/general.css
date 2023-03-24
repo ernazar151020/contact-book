@@ -51,6 +51,8 @@
   padding: 5px;
   cursor: pointer;
   max-width: 300px;
+  min-width: 300px;
+  margin: 0 auto;
 }
 
 .book:hover {
@@ -62,6 +64,12 @@
   height: 150px;
   width: 100%;
   margin-bottom: 10px;
+}
+
+.book_footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
 }
 
 .book_img img {
@@ -201,4 +209,14 @@
   margin: 50px 0;
   display: flex;
   align-items: center;
+}
+
+.books_header div {
+  margin: 5px;
+}
+
+@media (max-width: 767px) {
+  .books_header {
+    flex-direction: column;
+  }
 }
