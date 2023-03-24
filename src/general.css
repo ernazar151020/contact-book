@@ -51,8 +51,6 @@
   padding: 5px;
   cursor: pointer;
   max-width: 300px;
-  min-width: 300px;
-  margin: 0 auto;
 }
 
 .book:hover {
@@ -218,5 +216,10 @@
 @media (max-width: 767px) {
   .books_header {
     flex-direction: column;
+  }
+
+  .book {
+    min-width: 300px;
+    margin: 0 auto;
   }
 }
