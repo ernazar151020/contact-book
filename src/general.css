@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: #fff;
+}
+
+.logo {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.main_page {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.books_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  margin-top: 100px;
+}
+
+.backgroun_image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.book {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+  max-width: 300px;
+}
+
+.book:hover {
+  transition: all 0.3s linear;
+  /* transform: ; */
+}
+
+.book_img {
+  height: 150px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.book_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book_item {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.backgroun_image img {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+}
+
+/* spinner */
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  animation: rotate 1s linear infinite;
+}
+.loader::before,
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  animation: prixClipFix 2s linear infinite;
+}
+.loader::after {
+  border-color: #ff3d00;
+  animation: prixClipFix 2s linear infinite, rotate 0.5s linear infinite reverse;
+  inset: 6px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+}
+
+.form_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: #fff;
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+
+.input_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_group input {
+  padding: 8px;
+  width: 200px;
+}
+
+.sort_wrapper select {
+  padding: 8px;
+  width: 200px;
+}
+
+.input_group label {
+  padding: 8px;
+}
+
+.form_btn button {
+  padding: 7px;
+  margin: 10px 5px;
+  width: 90px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+
+.cancel_btn {
+  background-color: #ff3d00;
+  color: #fff;
+}
+
+.edit_btn {
+  background-color: cornflowerblue;
+}
+
+.books_header {
+  padding: 20px;
+  background-color: #fff;
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+}
