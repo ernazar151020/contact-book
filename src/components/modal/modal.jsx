@@ -25,7 +25,6 @@ export function Modal () {
     dispatch(closeModal())
   }
 
-  console.log(user)
   const modalRoot = document.getElementById('modal-root')
   return createPortal(
     <div className='modal'>
@@ -58,7 +57,7 @@ export function Modal () {
           >
             Cancel
           </button>
-          <button className='edit_btn' onClick={handleEdit}>
+          <button className='edit_btn' type='button' onClick={handleEdit}>
             Edit
           </button>
         </div>
